@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Ajuda — Setembro Amarelo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<header class="help-hero">
+  <h1>Você não precisa passar por isso sozinha(o)</h1>
+  <p style="max-width:56ch;opacity:0.9;">Existem pessoas preparadas para te ouvir agora, gratuitamente e sem julgamento — por telefone ou perto da sua casa.</p>
+  <div class="cvv-card">
+    <div class="cvv-number">188</div>
+    <div>
+      <strong>CVV — Centro de Valorização da Vida</strong>
+      <p style="margin:4px 0 0;opacity:0.85;font-size:0.9rem;">Ligação gratuita, sigilosa, 24h por dia, todos os dias — inclusive por chat em <a href="https://www.cvv.org.br" style="color:#FFC93C;">cvv.org.br</a>.</p>
+    </div>
+    <a href="tel:188" class="btn btn--primary" style="margin-left:auto;">Ligar agora</a>
+  </div>
+</header>
+
+<section class="section">
+  <div class="section__head">
+    <h2>Encontre uma UBS ou CAPS perto de você</h2>
+    <p>Digite seu endereço abaixo. O CAPS (Centro de Atenção Psicossocial) é especializado em saúde mental; a UBS (posto de saúde) também pode te acolher e encaminhar. Atendimento público e gratuito pelo SUS.</p>
+  </div>
+
+  <div class="locator-box">
+    <div class="form-field">
+      <label for="address-input">Seu endereço, bairro ou cidade</label>
+      <input type="text" id="address-input" placeholder="Ex: Av. Paulista, São Paulo - SP">
+    </div>
+    <button class="btn btn--primary" id="search-btn" style="width:100%;justify-content:center;">Buscar unidades próximas</button>
+    <p class="status-msg" id="status-msg"></p>
+    <div class="results-list" id="results-list"></div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="section__head">
+    <h2>Rede de apoio parceira</h2>
+    <p>Instituições e serviços públicos que também oferecem apoio psicológico.</p>
+  </div>
+  <div class="partners-list">
+    <div class="card">
+      <div class="card__icon">🏥</div>
+      <h3>CAPS do seu município</h3>
+      <p>Busque pela Secretaria de Saúde da sua cidade para conhecer a unidade mais próxima e o horário de atendimento.</p>
+    </div>
+    <div class="card">
+      <div class="card__icon">☎️</div>
+      <h3>CVV — 188</h3>
+      <p>Atendimento por telefone, chat e e-mail, todos os dias, a qualquer hora.</p>
+    </div>
+    <div class="card">
+      <div class="card__icon">🚨</div>
+      <h3>Emergência (SAMU 192)</h3>
+      <p>Em caso de risco imediato à vida, ligue para o SAMU ou vá ao pronto-socorro mais próximo.</p>
+    </div>
+  </div>
+</section>
+
+<footer class="footer">
+  <p>Os dados de CAPS/UBS exibidos aqui são exemplos para fins de protótipo. Veja o README para conectar a base oficial (CNES/DataSUS).</p>
+</footer>
+
+<div id="emergency-root"></div>
+
+<script src="js/common.js"></script>
+<script src="js/ajuda.js"></script>
+<script>renderNavbar('ajuda.html');</script>
+</body>
+</html>

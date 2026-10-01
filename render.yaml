@@ -1,0 +1,13 @@
+# Publicação no Render (plano gratuito): render.com > New > Blueprint > escolha o repositório.
+services:
+  - type: web
+    name: setembro-amarelo
+    runtime: node
+    plan: free
+    buildCommand: echo "sem build"
+    startCommand: node server.js
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false        # o Render pede o valor na hora; nunca coloque a chave neste arquivo
+      - key: TRUST_PROXY
+        value: "1"

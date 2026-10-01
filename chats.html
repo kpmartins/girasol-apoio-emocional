@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Chats — Setembro Amarelo</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700&family=Karla:wght@400;500;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="navbar-root"></div>
+
+<section class="section">
+  <div class="section__head">
+    <h1>Salas de conversa</h1>
+    <p>Escolha um espaço para conversar com outras pessoas sobre o que você está sentindo. As mensagens são visíveis para quem estiver na sala.</p>
+  </div>
+
+  <div class="disclaimer">
+    ⚠️ <span>Este chat é um espaço de apoio entre pessoas, <strong>não substitui atendimento psicológico ou médico</strong>. Se você está em risco imediato ou pensando em se machucar, ligue agora para o <strong>CVV: 188</strong> ou procure o pronto-socorro mais próximo.</span>
+  </div>
+
+  <div id="nickname-gate" class="nickname-gate">
+    <h3>Como podemos te chamar?</h3>
+    <p style="font-size:0.9rem;color:#6B5A48;">Use um apelido — não pedimos nome real nem e-mail.</p>
+    <input type="text" id="nickname-input" placeholder="Ex: Girassol_23" maxlength="24">
+    <button class="btn btn--primary" id="nickname-confirm" style="width:100%;justify-content:center;">Continuar</button>
+  </div>
+
+  <div id="rooms-area" style="display:none;">
+    <div class="rooms-grid" id="rooms-grid">
+      <button class="room-card" data-room="ansiedade">
+        <div class="room-card__emoji">🌿</div>
+        <div class="room-card__title">Ansiedade</div>
+        <div class="room-card__desc">Para quem está com o pensamento acelerado ou sentindo aperto no peito.</div>
+        <span class="btn btn--secondary" style="pointer-events:none;">Entrar na sala</span>
+      </button>
+      <button class="room-card" data-room="tristeza">
+        <div class="room-card__emoji">🌧️</div>
+        <div class="room-card__title">Tristeza</div>
+        <div class="room-card__desc">Um espaço para dias mais pesados, sem precisar explicar tudo.</div>
+        <span class="btn btn--secondary" style="pointer-events:none;">Entrar na sala</span>
+      </button>
+      <button class="room-card" data-room="motivacao">
+        <div class="room-card__emoji">🌻</div>
+        <div class="room-card__title">Motivação</div>
+        <div class="room-card__desc">Para trocar pequenas vitórias e lembrar por que vale a pena continuar.</div>
+        <span class="btn btn--secondary" style="pointer-events:none;">Entrar na sala</span>
+      </button>
+    </div>
+
+    <div class="chat-window" id="chat-window">
+      <div class="chat-window__header">
+        <button class="chat-window__back" id="chat-back">← Voltar às salas</button>
+        <h3 id="chat-title">Sala</h3>
+        <span></span>
+      </div>
+      <div class="chat-messages" id="chat-messages"></div>
+      <form class="chat-input-row" id="chat-form">
+        <input type="text" id="chat-input" placeholder="Escreva com respeito e cuidado..." maxlength="500" autocomplete="off">
+        <button type="submit" class="btn btn--primary">Enviar</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<div id="emergency-root"></div>
+
+<script src="js/common.js"></script>
+<script type="module" src="js/chats.js"></script>
+<script>renderNavbar('chats.html');</script>
+</body>
+</html>
